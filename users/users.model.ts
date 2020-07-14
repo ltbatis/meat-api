@@ -1,13 +1,13 @@
 import * as mongoose from 'mongoose'
 
 export interface User extends mongoose.Document {
-  name: string,
+  nome: string,
   email: string,
   password: string
 }
 
 const userSchema = new mongoose.Schema({
-  name: {
+  nome: {
     type: String
   },
   email: {
