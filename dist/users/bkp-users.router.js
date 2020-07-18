@@ -44,9 +44,9 @@ class UsersRouter extends router_1.Router {
                 return next();
             });
         });
-        application.patch('/users/:id', (req, resp, next) => {
+        application.patch('/user/:id', (req, resp, next) => {
             const options = { new: true };
-            users_model_1.User.findByIdAndUpdate(req.params.id, req.body, options).then(user => {
+            users_model_1.User.findByIdAndUpdate(req.params.id, req.body).then(user => {
                 if (user) {
                     resp.json(user);
                     return next();
@@ -58,4 +58,4 @@ class UsersRouter extends router_1.Router {
     }
 }
 exports.usersRouter = new UsersRouter();
-//# sourceMappingURL=users.router.js.map
+//# sourceMappingURL=bkp-users.router.js.map
